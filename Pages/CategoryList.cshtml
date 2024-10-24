@@ -1,0 +1,36 @@
+﻿@page
+@model Category.Pages.CategoryListModel
+@{
+    ViewData["Title"] = "Product Category";
+}
+<h1>Category List</h1>
+<!-- the Razor pagge -->
+
+<!-- New Pizza form will go here -->
+
+<!-- List of pizzas will go here -->
+<div class="row">
+    <table class="CategoryTable">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Name</th>
+                
+            </tr>
+        </thead>
+        @foreach (var category in Model.Categories)
+        {
+            <tr style="border: 1px solid #333;">
+                <td scope="col">@category.Id</td>
+                <td scope="col">@category.Name</td>
+                
+            </tr>
+        }
+
+
+
+
+
+    </table>
+
+</div>
